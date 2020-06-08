@@ -26,8 +26,7 @@ class calculator:
         self.bt2.place(x=180, y=150)
 
         self.bt3 = Button(win, text='MULTIPLY', command= self.MultiplyNum)
-        self.bt4 = Button(win, text='DIVIDE')
-        self.bt4.bind('<Button-3>', self.divideNum)
+        self.bt4 = Button(win, text='DIVIDE', command= self.divideNum)
         self.bt3.place(x=280, y=150)
         self.bt4.place(x=380, y=150)
 
@@ -68,17 +67,12 @@ class calculator:
 
 
 
-    def divideNum(self, event):
+    def divideNum(self):
         self.entry3.delete(0,'end')
         first = int(self.entry1.get())
         second = int(self.entry2.get())
-        answer = first / second
+        answer = first // second
         self.entry3.insert(END, str(answer))
-
-
-
-
-
 
 
 
