@@ -1,3 +1,3 @@
 # python practice
 
-I practice implementing modules in python programs and familiarize myself with the data structures in the language 
+Practice implementing modules in python programs and familiarize myself with the data structures in the language 
