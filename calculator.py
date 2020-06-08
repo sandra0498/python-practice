@@ -23,10 +23,16 @@ class calculator:
         self.bt2 = Button(win, text='SUBTRACT')
         self.bt2.bind('<Button-1>', self.SubNum)
         self.bt1.place(x=100, y=150)
+        self.bt2.place(x=180, y=150)
 
+        self.bt3 = Button(win, text='MULTIPLY', command= self.MultiplyNum)
+        self.bt4 = Button(win, text='DIVIDE')
+        self.bt4.bind('<Button-3>', self.divideNum)
+        self.bt3.place(x=280, y=150)
+        self.bt4.place(x=380, y=150)
 
-
-
+        self.label3.place(x=100, y=200)
+        self.entry3.place(x=200, y=200)
 
 
 
@@ -42,7 +48,7 @@ class calculator:
 
 
 
-    def SubNum(self):
+    def SubNum(self, event):
         self.entry3.delete(0,'end')
         first = int(self.entry1.get())
         second = int(self.entry2.get())
@@ -52,11 +58,22 @@ class calculator:
 
 
 
-    # def MultiplyNum(self):
-    #
-    #
-    #
-    # def divideNum(self):
+    def MultiplyNum(self):
+        self.entry3.delete(0,'end')
+        first = int(self.entry1.get())
+        second = int(self.entry2.get())
+        answer = first * second
+        self.entry3.insert(END, str(answer))
+
+
+
+
+    def divideNum(self, event):
+        self.entry3.delete(0,'end')
+        first = int(self.entry1.get())
+        second = int(self.entry2.get())
+        answer = first / second
+        self.entry3.insert(END, str(answer))
 
 
 
