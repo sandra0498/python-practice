@@ -16,8 +16,11 @@ class colorWindow:
         self.b3 = Button(win, text = 'Green', fg ='#00FF00', command= self.turnGreen)
         self.b3.place(x=175, y=50)
 
-        self.b4 = Button(win, text = 'Blue', fg = '#0000FF',command = self.turnBlue)
+        self.b4 = Button(win, text='Blue', fg='#0000FF', command=self.turnBlue)
         self.b4.place(x=100, y=75)
+
+        self.b5 = Button(win, text='Purple', fg='#800080', command=self.turnPurple)
+        self.b5.place(x=130, y=75)
 
 
 
@@ -32,6 +35,9 @@ class colorWindow:
 
     def turnBlue(self):
         window.configure(bg='#0000FF')
+
+    def turnPurple(self):
+        window.configure(bg='#800080')
 
 
 
