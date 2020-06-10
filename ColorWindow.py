@@ -1,5 +1,7 @@
 from tkinter import *
 
+
+
 class colorWindow:
 
 
@@ -22,13 +24,21 @@ class colorWindow:
         self.b5 = Button(win, text='Purple', fg='#800080', command=self.turnPurple)
         self.b5.place(x=130, y=75)
 
+        self.b6 = Button(win, text='Orange', fg='#FF5733', command=self.turnOrange)
+        self.b6.place(x=170, y=75)
+
+
+
+
+
+
 
 
     def turnRed(self):
-        window.configure(bg = '#FF0000')
+        window.configure(bg='#FF0000')
 
     def turnYellow(self):
-        window.configure(bg= '#FFFF00')
+        window.configure(bg='#FFFF00')
 
     def turnGreen(self):
         window.configure(bg='#00FF00')
@@ -38,6 +48,10 @@ class colorWindow:
 
     def turnPurple(self):
         window.configure(bg='#800080')
+
+    def turnOrange(self):
+        window.configure(bg='#FF5733')
+
 
 
 
