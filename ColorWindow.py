@@ -42,6 +42,10 @@ class colorWindow:
 
     def turnGreen(self):
         window.configure(bg='#00FF00')
+        window.after(200, lambda: window.configure(bg='#98FB98'))
+        window.after(400, lambda: window.configure(bg='#00FA9A'))
+        window.after(600, lambda: window.configure(bg='#808000'))
+        window.after(800, lambda: window.configure(bg='#2E8B57'))
 
     def turnBlue(self):
         window.configure(bg='#0000FF')
