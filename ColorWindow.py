@@ -45,11 +45,16 @@ class colorWindow:
         window.after(400, lambda: window.configure(bg='#00FA9A'))  # medium spring green
         window.after(600, lambda: window.configure(bg='#6B8E23'))  # olive drab
         window.after(800, lambda: window.configure(bg='#2E8B57'))  # sea green
-        window.after(1000, lambda: window.configure(bg='#7FFF00'))  # chartreuse 
+        window.after(1000, lambda: window.configure(bg='#7FFF00'))  # chartreuse
 
     def turnBlue(self):
         window.configure(bg='#0000FF')
-
+        window.after(200, lambda: window.configure(bg='#000080'))  # navy
+        window.after(400, lambda: window.configure(bg='#00BFFF'))  # deep sky blue
+        window.after(600, lambda: window.configure(bg='#1E90FF'))  # dodger blue
+        window.after(800, lambda: window.configure(bg='#B0E0E6'))  # powder blue
+        window.after(1000, lambda: window.configure(bg='#4682B4'))  # steel blue
+        
     def turnPurple(self):
         window.configure(bg='#800080')
         window.after(200, lambda: window.configure(bg='#FF00FF'))  # fuchsia
