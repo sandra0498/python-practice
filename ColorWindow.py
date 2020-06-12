@@ -32,6 +32,8 @@ class colorWindow:
 
     def turnYellow(self):
         window.configure(bg='#FFFF00')
+        window.after(200, lambda: window.configure(bg='#ADFF2F'))  # green yellow
+        window.after(400, lambda: window.configure(bg='#9ACD32'))  # yellow green
 
     def turnGreen(self):
         window.configure(bg='#00FF00')
@@ -49,7 +51,7 @@ class colorWindow:
         window.after(400, lambda: window.configure(bg='#DDA0DD'))  # plum
         window.after(600, lambda: window.configure(bg='#8A2BE2'))  # blue violet
         window.after(800, lambda: window.configure(bg='#EE82EE'))  # violet
-        window.after(1000, lambda: window.configure(bg='#BA55D3'))  # medium orchid 
+        window.after(1000, lambda: window.configure(bg='#BA55D3'))  # medium orchid
 
     def turnOrange(self):
         window.configure(bg='#FF5733')
