@@ -45,11 +45,11 @@ class colorWindow:
 
     def turnPurple(self):
         window.configure(bg='#800080')
-        window.after(200, lambda: window.configure(bg='#FF00FF'))
-        window.after(400, lambda: window.configure(bg='#DDA0DD'))
-        window.after(600, lambda: window.configure(bg='#8A2BE2'))
-        window.after(800, lambda: window.configure(bg='#EE82EE'))
-        window.after(1000, lambda: window.configure(bg='#BA55D3'))
+        window.after(200, lambda: window.configure(bg='#FF00FF'))  # fuchsia
+        window.after(400, lambda: window.configure(bg='#DDA0DD'))  # plum
+        window.after(600, lambda: window.configure(bg='#8A2BE2'))  # blue violet
+        window.after(800, lambda: window.configure(bg='#EE82EE'))  # violet
+        window.after(1000, lambda: window.configure(bg='#BA55D3'))  # medium orchid 
 
     def turnOrange(self):
         window.configure(bg='#FF5733')
