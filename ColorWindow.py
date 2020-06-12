@@ -40,11 +40,12 @@ class colorWindow:
 
 
     def turnGreen(self):
-        window.configure(bg='#00FF00')
-        window.after(200, lambda: window.configure(bg='#98FB98'))
-        window.after(400, lambda: window.configure(bg='#00FA9A'))
-        window.after(600, lambda: window.configure(bg='#808000'))
-        window.after(800, lambda: window.configure(bg='#2E8B57'))
+        window.configure(bg='#008000')
+        window.after(200, lambda: window.configure(bg='#98FB98'))  # pale green
+        window.after(400, lambda: window.configure(bg='#00FA9A'))  # medium spring green
+        window.after(600, lambda: window.configure(bg='#6B8E23'))  # olive drab
+        window.after(800, lambda: window.configure(bg='#2E8B57'))  # sea green
+        window.after(1000, lambda: window.configure(bg='#7FFF00'))  # chartreuse 
 
     def turnBlue(self):
         window.configure(bg='#0000FF')
