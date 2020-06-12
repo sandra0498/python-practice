@@ -34,6 +34,10 @@ class colorWindow:
         window.configure(bg='#FFFF00')
         window.after(200, lambda: window.configure(bg='#ADFF2F'))  # green yellow
         window.after(400, lambda: window.configure(bg='#9ACD32'))  # yellow green
+        window.after(600, lambda: window.configure(bg='#CCCC00'))  # dark yellow 1
+        window.after(800, lambda: window.configure(bg='#808000'))  # olive
+        window.after(1000, lambda: window.configure(bg='#FFFACD'))  # lemon chiffon
+
 
     def turnGreen(self):
         window.configure(bg='#00FF00')
