@@ -65,10 +65,10 @@ class colorWindow:
 
     def turnOrange(self):
         window.configure(bg='#FF5733')
-        window.after(200, lambda: window.configure(bg='#FFA500'))
-        window.after(400, lambda: window.configure(bg='#FF8C00'))
-        window.after(600, lambda: window.configure(bg='#FF4500'))
-        window.after(800, lambda: window.configure(bg='#FF7F50'))
+        window.after(200, lambda: window.configure(bg='#FFA500'))  # orange
+        window.after(400, lambda: window.configure(bg='#FF8C00'))  # dark orange
+        window.after(600, lambda: window.configure(bg='#FF4500'))  # orange red
+        window.after(800, lambda: window.configure(bg='#FF7F50'))  # coral
 
 
 
