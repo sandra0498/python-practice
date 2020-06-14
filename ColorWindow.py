@@ -54,7 +54,7 @@ class colorWindow:
         window.after(600, lambda: window.configure(bg='#1E90FF'))  # dodger blue
         window.after(800, lambda: window.configure(bg='#B0E0E6'))  # powder blue
         window.after(1000, lambda: window.configure(bg='#4682B4'))  # steel blue
-        
+
     def turnPurple(self):
         window.configure(bg='#800080')
         window.after(200, lambda: window.configure(bg='#FF00FF'))  # fuchsia
@@ -65,6 +65,11 @@ class colorWindow:
 
     def turnOrange(self):
         window.configure(bg='#FF5733')
+        window.after(200, lambda: window.configure(bg='#FFA500'))
+        window.after(400, lambda: window.configure(bg='#FF8C00'))
+        window.after(600, lambda: window.configure(bg='#FF4500'))
+        window.after(800, lambda: window.configure(bg='#FF7F50'))
+
 
 
 window = Tk()
