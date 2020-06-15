@@ -23,7 +23,7 @@ class colorWindow:
         self.b6.place(x=170, y=75)
 
         self.b7 = Button(win, text='Pink', fg='#FF1493', command=self.turnPink)
-
+        self.b7.place(x=120, y=100)
 
 
     def turnRed(self):
@@ -76,6 +76,11 @@ class colorWindow:
 
     def turnPink(self):
         window.configure(bg='#FFC0CB')
+        window.after(200, lambda: window.configure(bg='#FF69B4'))  # hot pink
+        window.after(400, lambda: window.configure(bg='#FFB6C1'))  # light pink
+        window.after(600, lambda: window.configure(bg='#FF1493'))  # deep pink
+        window.after(800, lambda: window.configure(bg='#FFC0CB'))
+        window.after(1000, lambda: window.configure(bg='#FF69B4'))  # hot pink
 
 
 
