@@ -25,6 +25,9 @@ class colorWindow:
         self.b7 = Button(win, text='Pink', fg='#FF1493', command=self.turnPink)
         self.b7.place(x=120, y=100)
 
+        self.b8 = Button(win, text='Cyan', fg='#00FFFF', command=self.turnCyan)
+        self.b8.place(x=153, y=100)
+
 
     def turnRed(self):
         window.configure(bg='#FF0000')
@@ -82,6 +85,13 @@ class colorWindow:
         window.after(800, lambda: window.configure(bg='#FFC0CB'))
         window.after(1000, lambda: window.configure(bg='#FF69B4'))  # hot pink
 
+    def turnCyan(self):
+        window.configure(bg='#00FFFF')
+        window.after(200, lambda: window.configure(bg='#40E0D0'))  # turquoise
+        window.after(400, lambda: window.configure(bg='#7FFFD4'))  # aquamarine
+        window.after(600, lambda: window.configure(bg='#48D1CC'))  # medium turquoise
+        window.after(800, lambda: window.configure(bg='#00CED1'))  # dark turquoise
+        window.after(1000, lambda: window.configure(bg='#20B2AA'))  # light sea green
 
 
 window = Tk()
