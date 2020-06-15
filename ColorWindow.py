@@ -97,6 +97,9 @@ class colorWindow:
 
     def turnBrown(self):
         window.configure(bg='#52361b')
+        window.after(200, lambda: window.configure(bg='#8B4513'))  # saddle brown
+        window.after(400, lambda: window.configure(bg='#A0522D'))  # sienna
+        window.after(600, lambda: window.configure(bg='#2b1d0e'))
 
 
 window = Tk()
