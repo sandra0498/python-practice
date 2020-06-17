@@ -32,6 +32,8 @@ class colorWindow:
         self.b9.place(x=187, y=100)
 
     def turnRed(self):
+        colors = ['#cf352e', '#c80815', '#850505', '#9b111e', '#ff0800', '#800000', '#FF6347',
+                  '#DC143C', '#DB7093', '#B22222', '#922724', '#8A0707', '#FF0000']
         window.configure(bg='#FF0000')
         window.after(200, lambda: window.configure(bg='#800000'))  # maroon
         window.after(400, lambda: window.configure(bg='#FF6347'))  # tomato
