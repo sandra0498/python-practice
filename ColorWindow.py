@@ -100,6 +100,8 @@ class colorWindow:
         window.after(200, lambda: window.configure(bg='#8B4513'))  # saddle brown
         window.after(400, lambda: window.configure(bg='#A0522D'))  # sienna
         window.after(600, lambda: window.configure(bg='#2b1d0e'))
+        window.after(800, lambda: window.configure(bg='#b87333'))  # copper
+        window.after(1000, lambda: window.configure(bg='#954535'))  # chestnut
 
 
 window = Tk()
