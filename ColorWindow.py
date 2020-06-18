@@ -31,6 +31,9 @@ class colorWindow:
         self.b9 = Button(win, text='Brown', fg='#52361b', command=self.turnBrown)
         self.b9.place(x=187, y=100)
 
+        self.b10 = Button(win, text='Tan', fg='#cda776', command=self.turnTan)
+        self.b10.place(x=90, y=100)
+
     def turnRed(self):
         colors = ['#cf352e', '#c80815', '#850505', '#9b111e', '#ff0800', '#800000', '#FF6347',
                   '#DC143C', '#DB7093', '#B22222', '#922724', '#8A0707', '#FF0000', '#800020']
@@ -126,10 +129,18 @@ class colorWindow:
         window.after(800, lambda: window.configure(bg='#b87333'))  # copper
         window.after(1000, lambda: window.configure(bg='#954535'))  # chestnut
 
+    def turnTan(self):
+        tans = ['#ecdd9a', '#c9bb8e', '#e3b778', '#e3c565', '#ebcfab',
+                '#e4bf8f', '#d7b963', '#f4dbb5', '#f6e1c1', '#e6dbad', '#dac27c']
+
+        for time in range(200, 2000, 200):
+            x = randrange(len(tans))
+            window.after(time, lambda: window.configure(bg=tans[x]))
+
 
 window = Tk()
 color = colorWindow(window)
-window.title('Colors')
+window.title('Different Colors')
 window.geometry('200x150')
 window.configure(bg='#C0C0C0')
 window.mainloop()
