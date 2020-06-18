@@ -7,10 +7,10 @@ class colorWindow:
         self.b1 = Button(win, text='Red', fg='#FF0000', command=self.turnRed)
         self.b1.place(x=100, y=50)
 
-        self.b2 = Button(win, text='Yellow', fg='#FFFF00', command=self.turnYellow)
+        self.b2 = Button(win, text='Yellow', fg='#FFD700', command=self.turnYellow)
         self.b2.place(x=130, y=50)
 
-        self.b3 = Button(win, text='Green', fg='#00FF00', command=self.turnGreen)
+        self.b3 = Button(win, text='Green', fg='#00a86b', command=self.turnGreen)
         self.b3.place(x=175, y=50)
 
         self.b4 = Button(win, text='Blue', fg='#0000FF', command=self.turnBlue)
@@ -65,12 +65,19 @@ class colorWindow:
 
 
     def turnGreen(self):
-        window.configure(bg='#008000')
-        window.after(200, lambda: window.configure(bg='#98FB98'))  # pale green
-        window.after(400, lambda: window.configure(bg='#00FA9A'))  # medium spring green
-        window.after(600, lambda: window.configure(bg='#6B8E23'))  # olive drab
-        window.after(800, lambda: window.configure(bg='#2E8B57'))  # sea green
-        window.after(1000, lambda: window.configure(bg='#7FFF00'))  # chartreuse
+        greens = ['#008000', '#98FB98', '#00FA9A', '#6B8E23', '#2E8B57', '#7FFF00', '#32cd32', '#3fff00',
+                  '#0bda51', '#00693e', '#76ff7a', '#5edc1f', '#00FF00', '#009000', '#00ff7f', '#77dd77', '#00a86b']
+
+        for time in range(200, 2000, 200):
+            x = randrange(len(greens))
+            window.after(time, lambda: window.configure(bg=greens[x]))
+
+        # window.configure(bg='#008000')
+        # window.after(200, lambda: window.configure(bg='#98FB98'))  # pale green
+        # window.after(400, lambda: window.configure(bg='#00FA9A'))  # medium spring green
+        # window.after(600, lambda: window.configure(bg='#6B8E23'))  # olive drab
+        # window.after(800, lambda: window.configure(bg='#2E8B57'))  # sea green
+        # window.after(1000, lambda: window.configure(bg='#7FFF00'))  # chartreuse
 
     def turnBlue(self):
         window.configure(bg='#0000FF')
