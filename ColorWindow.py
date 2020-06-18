@@ -1,5 +1,5 @@
 from tkinter import *
-
+from random import *
 
 class colorWindow:
 
@@ -33,15 +33,23 @@ class colorWindow:
 
     def turnRed(self):
         colors = ['#cf352e', '#c80815', '#850505', '#9b111e', '#ff0800', '#800000', '#FF6347',
-                  '#DC143C', '#DB7093', '#B22222', '#922724', '#8A0707', '#FF0000']
-        window.configure(bg='#FF0000')
-        window.after(200, lambda: window.configure(bg='#800000'))  # maroon
-        window.after(400, lambda: window.configure(bg='#FF6347'))  # tomato
-        window.after(600, lambda: window.configure(bg='#DC143C'))  # crimson
-        window.after(800, lambda: window.configure(bg='#DB7093'))  # pale violet red
-        window.after(1000, lambda: window.configure(bg='#B22222'))  # firebrick
+                  '#DC143C', '#DB7093', '#B22222', '#922724', '#8A0707', '#FF0000', '#800020']
+        # window.configure(bg='#FF0000')
+
+        x = randrange(len(colors))  # creates a randomly generated index from 0 to the length of the list 
+        for time in range(200, 2000, 200):  # beginning 200 ms - 2000 ms -- 200 step value
+            window.after(time, lambda: window.configure(bg=colors[x]))
+        # this  ^^ for loop ^^ takes care of the code below
+
+        # window.configure(bg='#FF0000')
+        # window.after(200, lambda: window.configure(bg='#800000'))  # maroon
+        # window.after(400, lambda: window.configure(bg='#FF6347'))  # tomato
+        # window.after(600, lambda: window.configure(bg='#DC143C'))  # crimson
+        # window.after(800, lambda: window.configure(bg='#DB7093'))  # pale violet red
+        # window.after(1000, lambda: window.configure(bg='#B22222'))  # firebrick
 
     def turnYellow(self):
+        colors = []
         window.configure(bg='#FFFF00')
         window.after(200, lambda: window.configure(bg='#ADFF2F'))  # green yellow
         window.after(400, lambda: window.configure(bg='#9ACD32'))  # yellow green
