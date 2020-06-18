@@ -36,8 +36,8 @@ class colorWindow:
                   '#DC143C', '#DB7093', '#B22222', '#922724', '#8A0707', '#FF0000', '#800020']
         # window.configure(bg='#FF0000')
 
-        x = randrange(len(colors))  # creates a randomly generated index from 0 to the length of the list 
         for time in range(200, 2000, 200):  # beginning 200 ms - 2000 ms -- 200 step value
+            x = randrange(len(colors))  # creates a randomly generated index from 0 to the length of the list
             window.after(time, lambda: window.configure(bg=colors[x]))
         # this  ^^ for loop ^^ takes care of the code below
 
@@ -49,13 +49,19 @@ class colorWindow:
         # window.after(1000, lambda: window.configure(bg='#B22222'))  # firebrick
 
     def turnYellow(self):
-        colors = []
-        window.configure(bg='#FFFF00')
-        window.after(200, lambda: window.configure(bg='#ADFF2F'))  # green yellow
-        window.after(400, lambda: window.configure(bg='#9ACD32'))  # yellow green
-        window.after(600, lambda: window.configure(bg='#CCCC00'))  # dark yellow 1
-        window.after(800, lambda: window.configure(bg='#808000'))  # olive
-        window.after(1000, lambda: window.configure(bg='#FFFACD'))  # lemon chiffon
+        colors = ['#FFFF00', '#ADFF2F', '#9ACD32', '#CCCC00', '#808000', '#FFFACD', '#fff700', '#fffe7a',
+                  '#ffd800', '#f0e130', '#dfff00', '#f1ff62', '#fdde6c', '#FFD700', '#e4d00a']
+
+        for time in range(200, 2000, 200):
+            x = randrange(len(colors))
+            window.after(time, lambda: window.configure(bg=colors[x]))
+        #
+        # window.configure(bg='#FFFF00')
+        # window.after(200, lambda: window.configure(bg='#ADFF2F'))  # green yellow
+        # window.after(400, lambda: window.configure(bg='#9ACD32'))  # yellow green
+        # window.after(600, lambda: window.configure(bg='#CCCC00'))  # dark yellow 1
+        # window.after(800, lambda: window.configure(bg='#808000'))  # olive
+        # window.after(1000, lambda: window.configure(bg='#FFFACD'))  # lemon chiffon
 
 
     def turnGreen(self):
