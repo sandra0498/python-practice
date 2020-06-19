@@ -52,12 +52,12 @@ class colorWindow:
         # window.after(1000, lambda: window.configure(bg='#B22222'))  # firebrick
 
     def turnYellow(self):
-        colors = ['#FFFF00', '#ADFF2F', '#9ACD32', '#CCCC00', '#808000', '#FFFACD', '#fff700', '#fffe7a',
+        yellows= ['#FFFF00', '#ADFF2F', '#9ACD32', '#CCCC00', '#808000', '#FFFACD', '#fff700', '#fffe7a',
                   '#ffd800', '#f0e130', '#dfff00', '#f1ff62', '#fdde6c', '#FFD700', '#e4d00a']
 
         for time in range(200, 2000, 200):
-            x = randrange(len(colors))
-            window.after(time, lambda: window.configure(bg=colors[x]))
+            x = randrange(len(yellows))
+            window.after(time, lambda: window.configure(bg=yellows[x]))
         #
         # window.configure(bg='#FFFF00')
         # window.after(200, lambda: window.configure(bg='#ADFF2F'))  # green yellow
@@ -105,7 +105,7 @@ class colorWindow:
         for time in range(200, 2000, 200):
             x = randrange(len(purples))
             window.after(200, lambda: window.configure(bg=purples[x]))
-            
+
         # window.configure(bg='#800080')
         # window.after(200, lambda: window.configure(bg='#FF00FF'))  # fuchsia
         # window.after(400, lambda: window.configure(bg='#DDA0DD'))  # plum
