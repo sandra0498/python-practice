@@ -89,7 +89,7 @@ class colorWindow:
         for time in range(200, 2000, 200):
             x = randrange(len(blues))
             window.after(time, lambda: window.configure(bg=blues[x]))
-            
+
         # window.configure(bg='#0000FF')
         # window.after(200, lambda: window.configure(bg='#000080'))  # navy
         # window.after(400, lambda: window.configure(bg='#00BFFF'))  # deep sky blue
@@ -98,12 +98,20 @@ class colorWindow:
         # window.after(1000, lambda: window.configure(bg='#4682B4'))  # steel blue
 
     def turnPurple(self):
-        window.configure(bg='#800080')
-        window.after(200, lambda: window.configure(bg='#FF00FF'))  # fuchsia
-        window.after(400, lambda: window.configure(bg='#DDA0DD'))  # plum
-        window.after(600, lambda: window.configure(bg='#8A2BE2'))  # blue violet
-        window.after(800, lambda: window.configure(bg='#EE82EE'))  # violet
-        window.after(1000, lambda: window.configure(bg='#BA55D3'))  # medium orchid
+
+        purples = ['#800080', '#FF00FF', '#DDA0DD', '#8A2BE2', '#EE82EE', '#BA55D3',
+                   '#b284be', '#df73ff', '#880085', '#c9a0ff', '#FF66FF', '#9966cc',
+                   '#720058', '#FF66FF', '#8e4785']
+        for time in range(200, 2000, 200):
+            x = randrange(len(purples))
+            window.after(200, lambda: window.configure(bg=purples[x]))
+            
+        # window.configure(bg='#800080')
+        # window.after(200, lambda: window.configure(bg='#FF00FF'))  # fuchsia
+        # window.after(400, lambda: window.configure(bg='#DDA0DD'))  # plum
+        # window.after(600, lambda: window.configure(bg='#8A2BE2'))  # blue violet
+        # window.after(800, lambda: window.configure(bg='#EE82EE'))  # violet
+        # window.after(1000, lambda: window.configure(bg='#BA55D3'))  # medium orchid
 
     def turnOrange(self):
         window.configure(bg='#FF5733')
