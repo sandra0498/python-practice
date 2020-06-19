@@ -36,13 +36,13 @@ class colorWindow:
         self.b10.place(x=90, y=100)
 
     def turnRed(self):
-        colors = ['#cf352e', '#c80815', '#850505', '#9b111e', '#ff0800', '#800000', '#FF6347',
+        reds = ['#cf352e', '#c80815', '#850505', '#9b111e', '#ff0800', '#800000', '#FF6347',
                   '#DC143C', '#DB7093', '#B22222', '#922724', '#8A0707', '#FF0000', '#800020']
         # window.configure(bg='#FF0000')
 
         for time in range(200, 2000, 200):  # beginning 200 ms - 2000 ms -- 200 step value
-            x = randrange(len(colors))  # creates a randomly generated index from 0 to the length of the list
-            window.after(time, lambda: window.configure(bg=colors[x]))
+            x = randrange(len(reds))  # creates a randomly generated index from 0 to the length of the list
+            window.after(time, lambda: window.configure(bg=reds[x]))
         # this  ^^ for loop ^^ takes care of the code below
 
         # window.configure(bg='#FF0000')
