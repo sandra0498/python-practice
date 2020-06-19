@@ -1,6 +1,7 @@
 from tkinter import *
 from random import *
 
+
 class colorWindow:
 
     def __init__(self, win):
@@ -52,8 +53,8 @@ class colorWindow:
         # window.after(1000, lambda: window.configure(bg='#B22222'))  # firebrick
 
     def turnYellow(self):
-        yellows= ['#FFFF00', '#ADFF2F', '#9ACD32', '#CCCC00', '#808000', '#FFFACD', '#fff700', '#fffe7a',
-                  '#ffd800', '#f0e130', '#dfff00', '#f1ff62', '#fdde6c', '#FFD700', '#e4d00a']
+        yellows = ['#FFFF00', '#ADFF2F', '#9ACD32', '#CCCC00', '#808000', '#FFFACD', '#fff700', '#fffe7a',
+                   '#ffd800', '#f0e130', '#dfff00', '#f1ff62', '#fdde6c', '#FFD700', '#e4d00a']
 
         for time in range(200, 2000, 200):
             x = randrange(len(yellows))
@@ -65,7 +66,6 @@ class colorWindow:
         # window.after(600, lambda: window.configure(bg='#CCCC00'))  # dark yellow 1
         # window.after(800, lambda: window.configure(bg='#808000'))  # olive
         # window.after(1000, lambda: window.configure(bg='#FFFACD'))  # lemon chiffon
-
 
     def turnGreen(self):
         greens = ['#008000', '#98FB98', '#00FA9A', '#6B8E23', '#2E8B57', '#7FFF00', '#32cd32', '#3fff00',
