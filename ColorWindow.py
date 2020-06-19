@@ -83,12 +83,19 @@ class colorWindow:
         # window.after(1000, lambda: window.configure(bg='#7FFF00'))  # chartreuse
 
     def turnBlue(self):
-        window.configure(bg='#0000FF')
-        window.after(200, lambda: window.configure(bg='#000080'))  # navy
-        window.after(400, lambda: window.configure(bg='#00BFFF'))  # deep sky blue
-        window.after(600, lambda: window.configure(bg='#1E90FF'))  # dodger blue
-        window.after(800, lambda: window.configure(bg='#B0E0E6'))  # powder blue
-        window.after(1000, lambda: window.configure(bg='#4682B4'))  # steel blue
+        blues = ['#0000FF', '#000080', '#00BFFF', '#1E90FF', '#B0E0E6', '#4682B4', '#6488ea',
+                 '#0000AA', '#73c2fb', '#5D8AA8', '#002fa7', '#1ca9c9', '#89CFF0', '#0054b4', ' #1034a6',
+                 '#00008b']
+        for time in range(200, 2000, 200):
+            x = randrange(len(blues))
+            window.after(time, lambda: window.configure(bg=blues[x]))
+            
+        # window.configure(bg='#0000FF')
+        # window.after(200, lambda: window.configure(bg='#000080'))  # navy
+        # window.after(400, lambda: window.configure(bg='#00BFFF'))  # deep sky blue
+        # window.after(600, lambda: window.configure(bg='#1E90FF'))  # dodger blue
+        # window.after(800, lambda: window.configure(bg='#B0E0E6'))  # powder blue
+        # window.after(1000, lambda: window.configure(bg='#4682B4'))  # steel blue
 
     def turnPurple(self):
         window.configure(bg='#800080')
