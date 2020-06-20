@@ -137,7 +137,7 @@ class colorWindow:
         for time in range(200, 2000, 200):
             x = randrange(len(pinks))
             window.after(time, lambda: window.configure(bg=pinks[x]))
-            
+
         # window.configure(bg='#FFC0CB')
         # window.after(200, lambda: window.configure(bg='#FF69B4'))  # hot pink
         # window.after(400, lambda: window.configure(bg='#FFB6C1'))  # light pink
@@ -146,12 +146,20 @@ class colorWindow:
         # window.after(1000, lambda: window.configure(bg='#FF69B4'))  # hot pink
 
     def turnCyan(self):
-        window.configure(bg='#00FFFF')
-        window.after(200, lambda: window.configure(bg='#40E0D0'))  # turquoise
-        window.after(400, lambda: window.configure(bg='#7FFFD4'))  # aquamarine
-        window.after(600, lambda: window.configure(bg='#48D1CC'))  # medium turquoise
-        window.after(800, lambda: window.configure(bg='#00CED1'))  # dark turquoise
-        window.after(1000, lambda: window.configure(bg='#20B2AA'))  # light sea green
+
+        cyans = ['#00FFFF', '#40E0D0', '#7FFFD4', '#48D1CC', '#00CED1',
+                 '#20B2AA', '#00ffea', '#00ffbf', '#14ffff', '#9dffff',
+                 '#37fdfc', '#00cdcd', '#8deeee', '#60dbdb']
+
+        for time in range(200, 2000, 200):
+            x = randrange(len(cyans))
+            window.after(time, lambda : window.configure(bg=cyans[x]))
+        # window.configure(bg='#00FFFF')
+        # window.after(200, lambda: window.configure(bg='#40E0D0'))  # turquoise
+        # window.after(400, lambda: window.configure(bg='#7FFFD4'))  # aquamarine
+        # window.after(600, lambda: window.configure(bg='#48D1CC'))  # medium turquoise
+        # window.after(800, lambda: window.configure(bg='#00CED1'))  # dark turquoise
+        # window.after(1000, lambda: window.configure(bg='#20B2AA'))  # light sea green
 
     def turnBrown(self):
         window.configure(bg='#52361b')
