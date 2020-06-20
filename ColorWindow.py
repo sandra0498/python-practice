@@ -129,12 +129,21 @@ class colorWindow:
         # window.after(800, lambda: window.configure(bg='#FF7F50'))  # coral
 
     def turnPink(self):
-        window.configure(bg='#FFC0CB')
-        window.after(200, lambda: window.configure(bg='#FF69B4'))  # hot pink
-        window.after(400, lambda: window.configure(bg='#FFB6C1'))  # light pink
-        window.after(600, lambda: window.configure(bg='#FF1493'))  # deep pink
-        window.after(800, lambda: window.configure(bg='#FFC0CB'))
-        window.after(1000, lambda: window.configure(bg='#FF69B4'))  # hot pink
+
+        pinks = ['#FFC0CB', '#FF69B4', '#FFB6C1', '#FF1493', '#FFC0CB',
+                 '#FF69B4', '#fc8eac', '#ffa6c9', '#ffb7c5', '#ff0490',
+                 '#fd6c9e', '#FF00CC', '#f49ac2']
+
+        for time in range(200, 2000, 200):
+            x = randrange(len(pinks))
+            window.after(time, lambda: window.configure(bg=pinks[x]))
+            
+        # window.configure(bg='#FFC0CB')
+        # window.after(200, lambda: window.configure(bg='#FF69B4'))  # hot pink
+        # window.after(400, lambda: window.configure(bg='#FFB6C1'))  # light pink
+        # window.after(600, lambda: window.configure(bg='#FF1493'))  # deep pink
+        # window.after(800, lambda: window.configure(bg='#FFC0CB'))
+        # window.after(1000, lambda: window.configure(bg='#FF69B4'))  # hot pink
 
     def turnCyan(self):
         window.configure(bg='#00FFFF')
