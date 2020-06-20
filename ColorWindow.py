@@ -114,11 +114,19 @@ class colorWindow:
         # window.after(1000, lambda: window.configure(bg='#BA55D3'))  # medium orchid
 
     def turnOrange(self):
-        window.configure(bg='#FF5733')
-        window.after(200, lambda: window.configure(bg='#FFA500'))  # orange
-        window.after(400, lambda: window.configure(bg='#FF8C00'))  # dark orange
-        window.after(600, lambda: window.configure(bg='#FF4500'))  # orange red
-        window.after(800, lambda: window.configure(bg='#FF7F50'))  # coral
+
+        oranges = ['#FF5733', '#FFA500', '#FF8C00', '#FF4500', '#FF7F50',
+                   '#FF6700', '#ffb347', '#ff8243', '#ff8f00', '#f08300',
+                   '#ffa62b', '#ee7600', '#ed9121']
+
+        for time in range(200, 2000, 200):
+            x = randrange(len(oranges))
+            window.after(time, lambda: window.configure(bg=oranges[x]))
+        # window.configure(bg='#FF5733')
+        # window.after(200, lambda: window.configure(bg='#FFA500'))  # orange
+        # window.after(400, lambda: window.configure(bg='#FF8C00'))  # dark orange
+        # window.after(600, lambda: window.configure(bg='#FF4500'))  # orange red
+        # window.after(800, lambda: window.configure(bg='#FF7F50'))  # coral
 
     def turnPink(self):
         window.configure(bg='#FFC0CB')
