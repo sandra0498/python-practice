@@ -162,12 +162,21 @@ class colorWindow:
         # window.after(1000, lambda: window.configure(bg='#20B2AA'))  # light sea green
 
     def turnBrown(self):
-        window.configure(bg='#52361b')
-        window.after(200, lambda: window.configure(bg='#8B4513'))  # saddle brown
-        window.after(400, lambda: window.configure(bg='#A0522D'))  # sienna
-        window.after(600, lambda: window.configure(bg='#2b1d0e'))
-        window.after(800, lambda: window.configure(bg='#b87333'))  # copper
-        window.after(1000, lambda: window.configure(bg='#954535'))  # chestnut
+
+        browns = ['#52361b', '#8B4513', '#A0522D', '#2b1d0e', '#b87333',
+                  '#954535', '#b38b6d', '#cd7f32', '#a0522d', '#5d432c',
+                  '#6f4e37', '#cc7722', '#80461b']
+
+        for time in range(200, 2000, 200):
+            x = randrange(len(browns))
+            window.after(time, lambda: window.configure(bg=browns[x]))
+
+        # window.configure(bg='#52361b')
+        # window.after(200, lambda: window.configure(bg='#8B4513'))  # saddle brown
+        # window.after(400, lambda: window.configure(bg='#A0522D'))  # sienna
+        # window.after(600, lambda: window.configure(bg='#2b1d0e'))
+        # window.after(800, lambda: window.configure(bg='#b87333'))  # copper
+        # window.after(1000, lambda: window.configure(bg='#954535'))  # chestnut
 
     def turnTan(self):
         tans = ['#ecdd9a', '#c9bb8e', '#e3b778', '#e3c565', '#ebcfab',
