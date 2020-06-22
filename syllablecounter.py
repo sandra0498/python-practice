@@ -14,7 +14,7 @@ class syllableCounter:
         self.button1 = Button(win, text='ENTER', fg='#8B0000')
         self.button1.place(x=80, y=100)
 
-        self.Label2 = Label(win, text='Amount of syllables is -->', fg='#9400D3')
+        self.Label2 = Label(win, text='Total amount of syllables is -->', fg='#9400D3')
         self.Label2.place(x=50, y=150)
 
         self.e2 = Entry()
