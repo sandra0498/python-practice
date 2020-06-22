@@ -1,6 +1,6 @@
 from tkinter import *
 
-vowels = ('a', 'e', 'i', 'o', 'u', 'y')  # with an exception of 'y'
+vowels = ['a', 'e', 'i', 'o', 'u', 'y'] # with an exception of 'y'
 
 
 class syllableCounter:
