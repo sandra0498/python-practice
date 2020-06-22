@@ -18,7 +18,7 @@ class syllableCounter:
         self.Label2.place(x=50, y=150)
 
         self.e2 = Entry()
-        self.e2.place(x=200, y=150)
+        self.e2.place(x=220, y=150)
 
 
 window = Tk()
