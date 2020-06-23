@@ -48,6 +48,7 @@ def SecondRule(num, word):
             if word[index - 1] in vowels or word[index + 1] in vowels:
                 # if a vowel is on either side of 'y'
                 num -= 1
+    thirdRule(num, word)
 
     print('count --> ', num)
 
@@ -65,6 +66,8 @@ def thirdRule(num, word):
 
             if 'es' in word:  # checks if substring is in the string
                 place = word.rfind('es')  # gets the index of the rightmost side
+
+
 
 
 question = input("Enter a word please : ")
