@@ -56,11 +56,14 @@ def thirdRule(num, word):
   # >> an 'e' in the word 
   if 'e' in word:
     index = word.rfind('e')
+    # print('the rfind of e is ', index )
     if index == len(word) - 1:  # while 'e' is @ the end of the word
+      # print('enter this loop (e is @ end ) ')
       if word[index - 2] in vowels:  # if the char two spaces in front is a vowel 
       #  >> ex) kite --> 2 vowels --> b/c 'i' is 2 spaces in front 
       #   >>> of 'e' --> it removes the vowel count --> as a result, 1 syllable 
         num -= 1  # decrements the initial vowel count 
+        # print('count after ', num)
 
     if 'es' in word:  # checks if substring is in the string 
       substrIndex = word.rfind('es')  # gets the index of the rightmost side
@@ -74,10 +77,11 @@ def thirdRule(num, word):
 
           if word[i] in vowels:  # if the char is a vowel 
             num -= 1  # >> decrements the vowel count 
-      print('The count after this rule is: ', num)
+  print('The count after this rule is: ', num)
 
 
             
+
 
 
 
