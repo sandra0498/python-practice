@@ -1,5 +1,7 @@
 vowels = ['a', 'e', 'i', 'o', 'u', 'y']
 twoVowelSounds = ['ae', 'ee', 'oa', 'oo', 'ou', 'oi', 'ow', 'aw', 'au']
+# this list consists of dipthongs 
+# >> dipthong - a union of two vowels pronounced in one syllable
 
 def countVowels(question):
   amountofvowels = 0 
