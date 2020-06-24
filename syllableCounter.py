@@ -82,10 +82,16 @@ def thirdRule(num, word):
             num -= 1  # >> decrements the vowel count 
   print('The count after this rule is: ', num)
 
+  lastRule(num, word)
 
-            
 
+def lastRule(num, word):
+  # this rule is intended to find if there are any two vowel sounds 
+  for sound in twoVowelSounds:  # iterating over the list 
+    if sound in word:  # checking if the element is in the word 
+      num -= 1
 
+  print('This is the final count ', num)
 
 
 
