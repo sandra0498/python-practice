@@ -1,4 +1,5 @@
 vowels = ['a', 'e', 'i', 'o', 'u', 'y']
+twoVowelSounds = ['ae', 'ee', 'oa', 'oo', 'ou', 'oi', 'ow', 'aw', 'au']
 
 def countVowels(question):
   amountofvowels = 0 
@@ -81,9 +82,6 @@ def thirdRule(num, word):
 
 
             
-
-
-
 
 
 
