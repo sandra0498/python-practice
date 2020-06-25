@@ -1,6 +1,6 @@
 from tkinter import *
 
-vowels = ['a', 'e', 'i', 'o', 'u', 'y'] # with an exception of 'y'
+vowels = ['a', 'e', 'i', 'o', 'u', 'y']  # with an exception of 'y'
 
 
 class syllableCounter:
@@ -11,7 +11,7 @@ class syllableCounter:
         self.e1 = Entry(bd=3)
         self.e1.place(x=50, y=75)
 
-        self.button1 = Button(win, text='ENTER', fg='#8B0000')
+        self.button1 = Button(win, text='ENTER', fg='#8B0000', command=self.countSyllable)
         self.button1.place(x=80, y=100)
 
         self.Label2 = Label(win, text='Total amount of syllables is -->', fg='#9400D3')
@@ -19,6 +19,25 @@ class syllableCounter:
 
         self.e2 = Entry()
         self.e2.place(x=220, y=150)
+
+    def countSyllable(self):
+        count = 0
+        word = self.e1.get()
+        for letter in word:
+            if letter in vowels:
+                count += 1  # determine if the word has vowels
+
+        # the qu rule
+        if 'q' in word:
+            index = word.index('q')
+            if index != len(word) - 1:
+                if word[index + 1] == 'u':
+                    count -= 1
+                    
+        
+        
+
+
 
 
 window = Tk()
