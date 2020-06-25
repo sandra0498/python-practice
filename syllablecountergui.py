@@ -12,6 +12,8 @@ def FirstRule(count, word):
             if word[index + 1] == 'u':
                 count -= 1
 
+    SecondRule(count, word)
+
 def SecondRule(count, word):
     if 'y' in word:
         index = word.index('y')
