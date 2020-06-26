@@ -1,17 +1,10 @@
 from tkinter import *
 
 vowels = ['a', 'e', 'i', 'o', 'u', 'y']  # with an exception of 'y'
+twoVowelSounds = ['ae', 'ee', 'oa', 'oo', 'ou', 'oi', 'ow', 'aw', 'au']
 
 
 
-def FirstRule(count, word):
-    # the qu rule
-    if 'q' in word:
-        index = word.index('q')
-        if index != len(word) - 1:
-            if word[index + 1] == 'u':
-                count -= 1
-    FirstRule(count, word)
 
 def SecondRule(count, word):
     if 'y' in word:
@@ -59,7 +52,21 @@ def thirdRule(count, word):
                     if word[i] in vowels:  # if the char is a vowel
                         count -= 1  # >> decrements the vowel count
     # print('The count after this rule is: ', count)
-    
+
+    lastRule(count, word)
+
+
+def lastRule(count, word, self):
+    # this rule is intended to find if there are any two vowel sounds
+    for sound in twoVowelSounds:  # iterating over the list
+        if sound in word:  # checking if the element is in the word
+            count -= 1
+
+    self.e2.place(END, int(count))
+
+    # print('This is the final count ', count)
+
+
 
 class syllableCounter:
     def __init__(self, win):
@@ -84,15 +91,41 @@ class syllableCounter:
         for letter in word:
             if letter in vowels:
                 count += 1  # determine if the word has vowels
-                
-        FirstRule(count, word)
 
+        self.FirstRule(count, word)
+
+
+    @staticmethod
+    def FirstRule(count, word):
+        # the qu rule
+        if 'q' in word:
+            index = word.index('q')
+            if index != len(word) - 1:
+                if word[index + 1] == 'u':
+                    count -= 1
+        SecondRule(count, word)
+                    
         
+    
+    @staticmethod
+    def SecondRule(count, word):
+        if 'y' in word:
+            index = word.index('y')
+            if index == 0:
+                for i in range(1, 3):  # check two spaces after the 'y'
+                    if word[i] in vowels:
+                        count -= 1  # decrements count for every vowel found after the 'y'
+            elif word.endswith('y'):
+                # option if 'y' is at the end of the word
+                if word[index - 1] in vowels:  # if vowel is before the char
+                    count -= 1  # decrement
+
+            else:  # conditional if 'y' is in the middle
+                if word[index - 1] in vowels or word[index + 1] in vowels:
+                    # if a vowel is on either side of 'y'
+                    count -= 1
         
-
-
-
-
+    
 
 
 window = Tk()
