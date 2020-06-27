@@ -12,6 +12,7 @@ class syllable:
         self.e1.place(x=50, y=75)
 
         self.button1 = Button(win, text='ENTER', fg='#8B0000', command=self.countSyllable)
+        self.button1.bind("<Button-1>", )
         self.button1.place(x=80, y=100)
 
         self.Label2 = Label(win, text='Total amount of syllables is -->', fg='#9400D3')
@@ -21,21 +22,30 @@ class syllable:
         self.e2.place(x=220, y=150)
 
 
+
+
+
+
     def countSyllable(self):
-        count = 0
-        word = self.e1.get()
-        word = word.lower()
-        for letter in word:
-            if letter in vowels:
-                count += 1  # determine if the word has vowels
 
-        first = count - self.FirstRule(count, word)
-        second = count - self.SecondRule(count, word)
-        third = count - self.thirdRule(count, word)
-        last = count - self.lastRule(count, word)
+        if len(self.e2.get()) == 0:
+            count = 0
+            word = self.e1.get()
+            word = word.lower()
+            for letter in word:
+                if letter in vowels:
+                    count += 1  # determine if the word has vowels
 
-        total = count - (first + second + third + last)
-        self.e2.insert(END, str(total))
+            first = count - self.FirstRule(count, word)
+            second = count - self.SecondRule(count, word)
+            third = count - self.thirdRule(count, word)
+            last = count - self.lastRule(count, word)
+
+            total = count - (first + second + third + last)
+            self.e2.insert(END, str(total))
+
+        else:
+            self.e2.delete(0, END)
 
 
     @staticmethod
