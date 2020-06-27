@@ -27,6 +27,7 @@ class syllable:
 
     def countSyllable(self):
 
+        # fixes the issue of the number stacking in the entry box 
         if len(self.e2.get()) == 0:
             count = 0
             word = self.e1.get()
@@ -35,15 +36,18 @@ class syllable:
                 if letter in vowels:
                     count += 1  # determine if the word has vowels
 
+            # determing how much was decremented from each method
             first = count - self.FirstRule(count, word)
             second = count - self.SecondRule(count, word)
             third = count - self.thirdRule(count, word)
             last = count - self.lastRule(count, word)
 
+            # the total vowel count - the total decremented = num of syllables
             total = count - (first + second + third + last)
             self.e2.insert(END, str(total))
 
         else:
+            # this clears the result entry box if a number is already there from a previous word
             self.e2.delete(0, END)
 
 
