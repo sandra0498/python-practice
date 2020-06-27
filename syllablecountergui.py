@@ -103,7 +103,7 @@ class syllableCounter:
             if index != len(word) - 1:
                 if word[index + 1] == 'u':
                     count -= 1
-                    
+
         SecondRule(count, word)
 
 
@@ -154,11 +154,17 @@ class syllableCounter:
 
                         if word[i] in vowels:  # if the char is a vowel
                             count -= 1  # >> decrements the vowel count
-                            
-        return count 
 
-
+        return count
     
+    
+    @staticmethod
+    def lastRule(count, word):
+        # this rule is intended to find if there are any two vowel sounds
+        for sound in twoVowelSounds:  # iterating over the list
+            if sound in word:  # checking if the element is in the word
+                count -= 1
+        return count 
 
 
 window = Tk()
