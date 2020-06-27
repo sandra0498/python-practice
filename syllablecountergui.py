@@ -1,14 +1,9 @@
 from tkinter import *
 
-from syllableCounter import SecondRule
-
 vowels = ['a', 'e', 'i', 'o', 'u', 'y']  # with an exception of 'y'
 twoVowelSounds = ['ae', 'ee', 'oa', 'oo', 'ou', 'oi', 'ow', 'aw', 'au']
 
-
-
-
-class syllableCounter:
+class syllable:
     def __init__(self, win):
         self.Label1 = Label(win, text='Enter the word below ', fg='#00008B')
         self.Label1.place(x=50, y=50)
@@ -24,6 +19,7 @@ class syllableCounter:
 
         self.e2 = Entry()
         self.e2.place(x=220, y=150)
+
 
     def countSyllable(self):
         count = 0
@@ -114,8 +110,16 @@ class syllableCounter:
         return count
 
 
+
+
+
+
+
+
+
+
 window = Tk()
-syllable = syllableCounter(window)
+s = syllable(window)
 window.title('Syllable Counter')
 window.configure(bg='#FAEBD7')
 window.geometry('200x150')
