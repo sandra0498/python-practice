@@ -1,13 +1,18 @@
+from math import floor
+
 import numpy as np
 
-arr = np.zeros( (5,9))
+arr = np.ones( (5,9))
 # print(arr)
 
 num = 1
 for i in range(4, -1, -1):
     for j in range(8, -1, -1):
-        arr[i][j] = num
+        arr[i][j] = floor(num)
         num += 1
 
+# print(arr)
 
-print(arr)
+newArr = arr.astype(int)
+
+
