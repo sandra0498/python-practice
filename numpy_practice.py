@@ -11,8 +11,8 @@ for i in range(4, -1, -1):
         arr[i][j] = floor(num)
         num += 1
 
-# print(arr)
 
+# converting the data type from float to int  
 newArr = arr.astype(int)
 
 
