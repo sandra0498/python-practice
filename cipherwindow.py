@@ -16,7 +16,11 @@ class window:
         self.label1.place(x=100, y=50)
         self.t1.place(x=335, y=50)
         self.button1.place(x=340, y=75)
+        self.t2 = Entry()
 
+        # place the second label
+        self.label2.place(x=100, y=125)
+        self.t2.place(x=250, y=125)
 
 
     def checkString(self):
