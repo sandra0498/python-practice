@@ -1,4 +1,5 @@
 from tkinter import *
+from random import *
 
 dictionary = {'a': 0, 'b': 1, 'c': 2, 'd': 3, 'e': 4, 'f': 5, 'g': 6, 'h': 7, 'i': 8,
               'j': 9, 'k': 10, 'l': 11, 'm': 12, 'n': 13, 'o': 14, 'p': 15,
@@ -11,11 +12,20 @@ class window:
         self.label1 = Label(win, text="Enter the message you'd like to encrypt :)")
         self.label2 = Label(win, text='The encrypted message is')
         self.t1 = Entry(bd=3)
-        self.button1 = Button(win, text='Enter')
+        self.button1 = Button(win, text='Enter', command=self.checkString())
         self.label1.place(x=100, y=50)
         self.t1.place(x=335, y=50)
 
 
+
+    def checkString(self):
+        word = self.t1.get()
+        word = word.lower()
+
+
+
+
+    @staticmethod
     def cipher(name, key):
         result = ""
         name = name.lower()
@@ -29,6 +39,7 @@ class window:
 
                 result += get_key(val)
             result += " "
+        return result
 
     # gets the key from the value
     def get_key(val):
