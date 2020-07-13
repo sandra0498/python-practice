@@ -21,14 +21,13 @@ class window:
     def checkString(self):
         word = self.t1.get()
         word = word.lower()
-
-
-
+        key = randint(1, 11)
+        encrypted = self.cipher(word, key)
+        
 
     @staticmethod
     def cipher(name, key):
         result = ""
-        name = name.lower()
         splits = name.split()
         for word in splits:
             for letter in word:
