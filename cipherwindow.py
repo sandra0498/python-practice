@@ -13,7 +13,7 @@ class window:
         self.label1 = Label(win, text="Enter the message you'd like to encrypt :)")
         self.label2 = Label(win, text='The encrypted message is')
         self.t1 = Entry(bd=3)
-        self.button1 = Button(win, text='Enter', width=15, command=self.checkString())
+        self.button1 = Button(win, text='Enter', width=15, command=self.checkString)
         self.label1.place(x=100, y=50)
         self.t1.place(x=335, y=50)
         self.button1.place(x=340, y=75)
@@ -28,7 +28,7 @@ class window:
         word = word.lower()
         key = randint(1, 11)
         encrypted = self.cipher(word, key)
-        self.t2.insert(END,str(encrypted))
+        self.t2.insert(END, str(encrypted))
 
     # conducts the cipher on the string
     @staticmethod
