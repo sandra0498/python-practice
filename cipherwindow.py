@@ -5,8 +5,9 @@ dictionary = {'a': 0, 'b': 1, 'c': 2, 'd': 3, 'e': 4, 'f': 5, 'g': 6, 'h': 7, 'i
               'j': 9, 'k': 10, 'l': 11, 'm': 12, 'n': 13, 'o': 14, 'p': 15,
               'q': 16, 'r': 17, 's': 18, 't': 19, 'u': 20, 'v': 21, 'w': 22,
               'x': 23, 'y': 24, 'z': 25}
-class window:
 
+
+class window:
 
     def __init__(self, win):
         self.label1 = Label(win, text="Enter the message you'd like to encrypt :)")
@@ -22,13 +23,12 @@ class window:
         self.label2.place(x=100, y=125)
         self.t2.place(x=250, y=125)
 
-
     def checkString(self):
         word = self.t1.get()
         word = word.lower()
         key = randint(1, 11)
         encrypted = self.cipher(word, key)
-        self.t2.place(encrypted)
+        self.t2.insert(END,str(encrypted))
 
     # conducts the cipher on the string
     @staticmethod
@@ -46,17 +46,11 @@ class window:
             result += " "
         return result
 
-
     # gets the key from the value
     def get_key(val):
         for key, value in dictionary.items():
             if val == value:
                 return key
-
-
-
-
-
 
 
 cipherwindow = Tk()
