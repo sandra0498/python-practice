@@ -30,7 +30,6 @@ class window:
         encrypted = cipher(word, key)
         self.t2.insert(END, str(encrypted))
 
-    # conducts the cipher on the string
 
 # gets the key from the value
 def get_key(val):
@@ -38,7 +37,7 @@ def get_key(val):
         if val == value:
             return key
 
-
+# conducts the cipher on the string
 def cipher(name, key):
     result = ""
     splits = name.split()
