@@ -27,30 +27,31 @@ class window:
         word = self.t1.get()
         word = word.lower()
         key = randint(1, 11)
-        encrypted = self.cipher(word, key)
+        encrypted = cipher(word, key)
         self.t2.insert(END, str(encrypted))
 
     # conducts the cipher on the string
-    @staticmethod
-    def cipher(name, key):
-        result = ""
-        splits = name.split()
-        for word in splits:
-            for letter in word:
-                val = dictionary.get(letter)
-                val += key
-                if val > 25:
-                    val %= 26
 
-                result += get_key(val)
-            result += " "
-        return result
+# gets the key from the value
+def get_key(val):
+    for key, value in dictionary.items():
+        if val == value:
+            return key
 
-    # gets the key from the value
-    def get_key(val):
-        for key, value in dictionary.items():
-            if val == value:
-                return key
+
+def cipher(name, key):
+    result = ""
+    splits = name.split()
+    for word in splits:
+        for letter in word:
+            val = dictionary.get(letter)
+            val += key
+            if val > 25:
+                val %= 26
+
+            result += get_key(val)
+        result += " "
+    return result
 
 
 cipherwindow = Tk()
