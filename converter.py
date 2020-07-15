@@ -1,6 +1,12 @@
 from tkinter import *
 
 
+def convertToHex():
+    num = decimal.get()
+    num = int(num)
+    hexrep = hex(num)
+    decimal.set(str(hexrep))
+
 
 if __name__ == '__main__':
     window = Tk()
@@ -12,8 +18,9 @@ if __name__ == '__main__':
     decimal.set('Insert decimal here')
 
     L1 = Label(window, text='Convert to:', font='Helvetica 12 bold')
-    L1.place(x=5,y=20)
-    FirstButton = Button(window, text='Hexadecimal', fg='white', bg='black', height=1, width=10)
+    L1.place(x=5, y=20)
+    FirstButton = Button(window, text='Hexadecimal', fg='white', bg='black',
+                         command=lambda: convertToHex(), height=1, width=10)
     FirstButton.place(x=5, y=50)
 
     SecondButton = Button(window, text='Binary', fg='white', bg='black', height=1, width=10)
