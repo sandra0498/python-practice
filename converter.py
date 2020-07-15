@@ -2,24 +2,24 @@ from tkinter import *
 
 
 def convertToHex():
-    # getting the entry 
+    # getting the entry
     num = decimal.get()
-    # converting the string to an int to get the hex value 
+    # converting the string to an int to get the hex value
     num = int(num)
     #base 10 --> base 16
     hexrep = hex(num)
-    # setting the new value to the entry box 
+    # setting the new value to the entry box
     decimal.set(str(hexrep))
 
 
 if __name__ == '__main__':
     window = Tk()
-    window.title('Decimal Converter')
+    window.title('Number System Converter')
     decimal = StringVar()
 
     initialNum = Entry(window, textvariable=decimal)
     initialNum.grid(columnspan=4, ipadx=70)
-    decimal.set('Insert decimal here')
+    decimal.set('Insert value here')
 
     L1 = Label(window, text='Convert to:', font='Helvetica 12 bold')
     L1.place(x=5, y=20)
