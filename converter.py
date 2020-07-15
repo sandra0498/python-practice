@@ -6,15 +6,19 @@ def convertToHex():
     num = number.get()
     # converting the string to an int to get the hex value
     num = int(num)
-    #base 10 --> base 16
+    # base 10 --> base 16
     hexrep = hex(num)
     # setting the new value to the entry box
     number.set(str(hexrep))
 
+
 def converttoBin():
     num = number.get()
     num = int(num)
-    
+    binRep = bin(num)
+    number.set(str(binRep))
+
+
 if __name__ == '__main__':
     window = Tk()
     window.title('Number System Converter')
@@ -30,7 +34,8 @@ if __name__ == '__main__':
                          command=lambda: convertToHex(), height=1, width=10)
     FirstButton.place(x=5, y=50)
 
-    SecondButton = Button(window, text='Binary', fg='white', bg='black', height=1, width=10)
+    SecondButton = Button(window, text='Binary', fg='white', bg='black',
+                          command=lambda: converttoBin(), height=1, width=10)
     SecondButton.place(x=5, y=80)
 
     window.mainloop()
