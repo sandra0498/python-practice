@@ -18,6 +18,8 @@ def converttoBin():
     try:
         num = int(num)
         binRep = bin(num)
+        # removes the first two characters of the binary (0x ) 
+        binRep = binRep[2:]
         number.set(str(binRep))
     except ValueError:
         tkinter.messagebox.showerror('Error', 'Insert digits only!')
