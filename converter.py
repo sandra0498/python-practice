@@ -42,4 +42,8 @@ if __name__ == '__main__':
                           command=lambda: converttoBin(), height=1, width=10)
     SecondButton.place(x=5, y=80)
 
+    clearButton = Button(window, text='Clear', fg='white', bg='black',
+                         command=lambda: clear(), height=1, width=10)
+    clearButton.place(x=5, y=110)
+
     window.mainloop()
