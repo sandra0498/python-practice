@@ -1,4 +1,5 @@
 from tkinter import *
+import tkinter.messagebox
 
 
 def convertToHex():
@@ -14,9 +15,17 @@ def convertToHex():
 
 def converttoBin():
     num = number.get()
-    num = int(num)
-    binRep = bin(num)
-    number.set(str(binRep))
+    try:
+        num = int(num)
+        binRep = bin(num)
+        number.set(str(binRep))
+    except ValueError:
+        tkinter.messagebox.showerror('Error', 'Insert digits only!')
+
+
+
+
+
 
 def clear():
     # setting the entry to blank
