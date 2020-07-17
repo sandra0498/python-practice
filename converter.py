@@ -18,6 +18,10 @@ def converttoBin():
     binRep = bin(num)
     number.set(str(binRep))
 
+def clear():
+    # setting the entry to blank
+    number.set("")
+
 
 if __name__ == '__main__':
     window = Tk()
