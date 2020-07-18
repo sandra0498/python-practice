@@ -10,6 +10,7 @@ def convertToHex():
         num = int(num)
         # base 10 --> base 16
         hexrep = hex(num)
+        hexrep = hexrep[2:0]
         # setting the new value to the entry box
         number.set(str(hexrep))
     except ValueError:
