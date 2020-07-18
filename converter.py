@@ -5,12 +5,15 @@ import tkinter.messagebox
 def convertToHex():
     # getting the entry
     num = number.get()
-    # converting the string to an int to get the hex value
-    num = int(num)
-    # base 10 --> base 16
-    hexrep = hex(num)
-    # setting the new value to the entry box
-    number.set(str(hexrep))
+    try:
+        # converting the string to an int to get the hex value
+        num = int(num)
+        # base 10 --> base 16
+        hexrep = hex(num)
+        # setting the new value to the entry box
+        number.set(str(hexrep))
+    except ValueError:
+        tkinter.messagebox.showerror('Error', 'Insert digits only!')
 
 
 def converttoBin():
@@ -18,7 +21,7 @@ def converttoBin():
     try:
         num = int(num)
         binRep = bin(num)
-        # removes the first two characters of the binary (0x ) 
+        # removes the first two characters of the binary (0x )
         binRep = binRep[2:]
         number.set(str(binRep))
     except ValueError:
