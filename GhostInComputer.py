@@ -14,9 +14,12 @@ mouse.click(ms.Button.left, 1)
 time.sleep(3)
 keyboard.type('notepad')
 time.sleep(3)
+# method of pressing the enter button
+keyboard.press(kb.Key.enter)
 
-mouse.position = (95, 223)
-mouse.click(ms.Button.left, 1)
+# method of clicking the notepad option 
+# mouse.position = (95, 223)
+# mouse.click(ms.Button.left, 1)
 time.sleep(3)
 for char in 'boo this is a ghost':
     keyboard.press(char)
