@@ -17,7 +17,7 @@ time.sleep(3)
 # method of pressing the enter button
 keyboard.press(kb.Key.enter)
 
-# method of clicking the notepad option 
+# method of clicking the notepad option
 # mouse.position = (95, 223)
 # mouse.click(ms.Button.left, 1)
 time.sleep(3)
@@ -26,19 +26,3 @@ for char in 'boo this is a ghost':
     keyboard.release(char)
     time.sleep(0.12)
 
-# keyboard.type('boo')
-
-# # Read pointer position
-# print('The current pointer position is {0}'.format(
-#     mouse.position))  # (1155, 40)
-#
-# i = 0
-# while i < 3:
-#     mouse.position = (1155,40)
-#     mouse.press(Button.left)
-#     mouse.release(Button.left)
-#     mouse.position = (734, 341)
-#     mouse.press(Button.left)
-#     mouse.release(Button.left)
-#     i+=1
-#
