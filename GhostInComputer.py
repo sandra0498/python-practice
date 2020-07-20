@@ -25,16 +25,14 @@ for char in 'boo this is a ghost':
     keyboard.release(char)
     time.sleep(0.12)
 
-
-
 time.sleep(3)
 
-with keyboard.pressed(kb.Key.caps_lock):
-    keyboard.press(kb.Key.enter)
-    for char in 'greetings human :)':
+with keyboard.pressed(kb.Key.caps_lock):  # once the keyboard detects caps lock was pressed
+    keyboard.press(kb.Key.enter)  # the enter bar is pressed
+    for char in 'greetings human :)':  # a message is typed out in response 
         keyboard.press(char)
         keyboard.release(char)
-        time.sleep(0.12)
+        time.sleep(0.12)   # with 0.12 seconds delay in btw character 
 
 
 # # clicking on the top of the notepad application
