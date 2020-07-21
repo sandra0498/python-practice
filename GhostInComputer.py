@@ -31,6 +31,15 @@ def on_press(key):
         print('special key ' + key)
 
 
+def on_release(key):
+    print(key + ' released')
+    if key == kb.Key.esc:
+        return False
+
+
+listener = kb2.Listener(on_press=on_press, on_release=on_release)
+listener.start()
+
 for char in 'boo this is a ghost':
     keyboard.press(char)
     keyboard.release(char)
@@ -38,6 +47,8 @@ for char in 'boo this is a ghost':
 
 time.sleep(5)
 
+
+# needs some fixing 
 if keyboard.pressed(kb.Key.caps_lock):  # once the keyboard detects caps lock was pressed
     keyboard.press(kb.Key.enter)  # the enter bar is pressed
     for char in 'greetings human :)':  # a message is typed out in response
