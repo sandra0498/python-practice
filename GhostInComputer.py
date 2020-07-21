@@ -3,6 +3,7 @@ import pynput.mouse as ms
 import pynput.keyboard as kb
 import time
 from random import *
+from pynput import keyboard as kb2
 
 # differentiating the two controllers
 mouse = ms.Controller()
@@ -19,21 +20,30 @@ keyboard.press(kb.Key.enter)
 # method of clicking the notepad option
 # mouse.position = (95, 223)
 # mouse.click(ms.Button.left, 1)
+
 time.sleep(3)
+
+
+def on_press(key):
+    try:
+        print(key + ' pressed')
+    except AttributeError:
+        print('special key ' + key)
+
+
 for char in 'boo this is a ghost':
     keyboard.press(char)
     keyboard.release(char)
     time.sleep(0.12)
 
-time.sleep(3)
+time.sleep(5)
 
-with keyboard.pressed(kb.Key.caps_lock):  # once the keyboard detects caps lock was pressed
+if keyboard.pressed(kb.Key.caps_lock):  # once the keyboard detects caps lock was pressed
     keyboard.press(kb.Key.enter)  # the enter bar is pressed
-    for char in 'greetings human :)':  # a message is typed out in response 
+    for char in 'greetings human :)':  # a message is typed out in response
         keyboard.press(char)
         keyboard.release(char)
-        time.sleep(0.12)   # with 0.12 seconds delay in btw character 
-
+        time.sleep(0.12)  # with 0.12 seconds delay in btw character
 
 # # clicking on the top of the notepad application
 # mouse.position = (574, 251)  # will depend on where the application opens up
