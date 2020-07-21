@@ -1,9 +1,9 @@
 from pynput.mouse import Button, Controller
 import pynput.mouse as ms
-import pynput.keyboard as kb  # imported this for controlling the keyboard 
+import pynput.keyboard as kb  # imported this for controlling the keyboard
 import time
 from random import *
-from pynput import keyboard as kb2  # imported this for listener 
+from pynput import keyboard as kb2  # imported this for listener
 
 # differentiating the two controllers
 mouse = ms.Controller()
@@ -48,7 +48,7 @@ for char in 'boo this is a ghost':
 time.sleep(5)
 
 
-# needs some fixing 
+# needs some fixing
 if keyboard.pressed(kb.Key.caps_lock):  # once the keyboard detects caps lock was pressed
     keyboard.press(kb.Key.enter)  # the enter bar is pressed
     for char in 'greetings human :)':  # a message is typed out in response
@@ -60,15 +60,4 @@ if keyboard.pressed(kb.Key.caps_lock):  # once the keyboard detects caps lock wa
 # mouse.position = (574, 251)  # will depend on where the application opens up
 # time.sleep(2)
 # mouse.press(ms.Button.left)
-#
-# for i in range(1, 10):
-#
-#     mouse.position = (1269, 331)
-#     mouse.position = (1204, 139)
-#     mouse.position = (941, 28)
-#     mouse.position = (509, 33)
-#     mouse.position = (245, 185)
-#     mouse.position = (29, 338)
-#
-#
-# # mouse.release(ms.Button.left)
+
