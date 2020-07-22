@@ -7,15 +7,15 @@ mouse = ms.Controller()
 keyboard = kb.Controller()
 
 # ---------------------------------------------------------------
-# with this approach, the icon was clicked on the taskbar 
-# and another tab was opened 
+# with this approach, the icon was clicked on the taskbar
+# and another tab was opened
 # (917, 700) -- position of the firefox icon on taskbar
 mouse.position = (917, 700)
 mouse.click(ms.Button.left, 1)
 
 time.sleep(3)
 
-# ctrl + t opens another tab 
+# ctrl + t opens another tab
 keyboard.press(kb.Key.ctrl)
 keyboard.press('t')
 
@@ -24,6 +24,14 @@ keyboard.release('t')
 
 # ------------------------------------------------------------
 
+# # with this approach, a new window is opened
+# # this clicks on the search prompt and enters firefox
+# mouse.position = (171, 705)
+# mouse.click(ms.Button.left, 1)
+# time.sleep(3)
+# keyboard.type('firefox')
+
+# ----------------------------------------------------------
 
 
 time.sleep(3)
