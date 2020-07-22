@@ -1,4 +1,3 @@
-from pynput.mouse import Button, Controller
 import pynput.mouse as ms
 import pynput.keyboard as kb  # imported this for controlling the keyboard
 import time
