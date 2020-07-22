@@ -54,18 +54,19 @@ time.sleep(5)
 
 # listener = kb2.Listener(on_press=on_press, on_release=on_release)
 # # listener.start()
-
-with kb2.Listener(on_press=on_press) as listener:
-    listener.start()
+# 
+# with kb2.Listener(on_press=on_press) as listener:
+#     listener.start()
+#     listener.stop()
 
 
 # needs some fixing
-# if keyboard.pressed(kb.Key.caps_lock):  # once the keyboard detects caps lock was pressed
-#     keyboard.press(kb.Key.enter)  # the enter bar is pressed
-#     for char in 'greetings human :)':  # a message is typed out in response
-#         keyboard.press(char)
-#         keyboard.release(char)
-#         time.sleep(0.12)  # with 0.12 seconds delay in btw character
+if keyboard.pressed(kb.Key.caps_lock):  # once the keyboard detects caps lock was pressed
+    keyboard.press(kb.Key.enter)  # the enter bar is pressed
+    for char in 'greetings human :)':  # a message is typed out in response
+        keyboard.press(char)
+        keyboard.release(char)
+        time.sleep(0.12)  # with 0.12 seconds delay in btw character
 
 # # clicking on the top of the notepad application
 # mouse.position = (574, 251)  # will depend on where the application opens up
