@@ -6,16 +6,25 @@ import time
 mouse = ms.Controller()
 keyboard = kb.Controller()
 
+# ---------------------------------------------------------------
+# with this approach, the icon was clicked on the taskbar 
+# and another tab was opened 
 # (917, 700) -- position of the firefox icon on taskbar
 mouse.position = (917, 700)
 mouse.click(ms.Button.left, 1)
 
 time.sleep(3)
+
+# ctrl + t opens another tab 
 keyboard.press(kb.Key.ctrl)
 keyboard.press('t')
 
 keyboard.release(kb.Key.ctrl)
 keyboard.release('t')
+
+# ------------------------------------------------------------
+
+
 
 time.sleep(3)
 keyboard.type('gmail.com')
