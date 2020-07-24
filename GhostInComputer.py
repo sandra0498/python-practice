@@ -23,24 +23,24 @@ keyboard.press(kb.Key.enter)
 time.sleep(3)
 
 
-def on_press(key):
-    try:
-        print(key + ' pressed')
-        if key == kb.Key.caps_lock:
-            keyboard.press(kb.Key.enter)  # the enter bar is pressed
-            for char in 'greetings human :)':  # a message is typed out in response
-                keyboard.press(char)
-                keyboard.release(char)
-                time.sleep(0.12)  # with 0.12 seconds delay in btw character
+# def on_press(key):
+#     try:
+#         print(key + ' pressed')
+#         if key == kb.Key.caps_lock:
+#             keyboard.press(kb.Key.enter)  # the enter bar is pressed
+#             for char in 'greetings human :)':  # a message is typed out in response
+#                 keyboard.press(char)
+#                 keyboard.release(char)
+#                 time.sleep(0.12)  # with 0.12 seconds delay in btw character
 
-    except AttributeError:
-        print('special key ' + key)
+#     except AttributeError:
+#         print('special key ' + key)
 
 
-def on_release(key):
-    print(key + ' released')
-    if key == kb.Key.esc:
-        return False
+# def on_release(key):
+#     print(key + ' released')
+#     if key == kb.Key.esc:
+#         return False
 
 
 for char in 'boo this is a ghost':
