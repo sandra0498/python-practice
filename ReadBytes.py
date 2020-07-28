@@ -22,14 +22,6 @@ for line in file_obj:
                 output += h
                 output += ' '
 
-
-                # binData = bin(ascVal)
-                # print(binData)
-                # str_to_bin = binascii.a2b_uu(binData)
-                # print(str_to_bin)
-                # bin_to_hex = binascii.hexlify(str_to_bin)
-                # print(bin_to_hex)
-                # file_obj.write(str(binData))
     output += '\n'
 print(output)
 
