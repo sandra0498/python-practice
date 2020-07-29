@@ -1,6 +1,3 @@
-import binascii
-import optparse
-
 filename = 'CSJOKE.txt'
 file_obj = open(filename, 'r+')  # input file
 
@@ -17,8 +14,8 @@ for line in file_obj:
                 ascVal = ord(letter)
                 # print(ascVal)
                 # print('the ascii value for {} is {}'.format(letter, ascVal))
-                
-                # converting the ascii value to hex 
+
+                # converting the ascii value to hex
                 h = hex(ascVal)
                 # print(h)
                 output += h
