@@ -1,10 +1,10 @@
 filename = 'CSJOKE.txt'
-file_obj = open(filename, 'r+')  # input file
 
 out_file = open('output.txt', 'w')
 
 output = ''
 try:
+    file_obj = open(filename, 'r+')  # input file
     for line in file_obj:
         for word in line:
             binVal = ' '.join(format(x, 'b') for x in bytearray(word, 'utf-8'))
