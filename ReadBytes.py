@@ -7,8 +7,7 @@ try:
     file_obj = open(filename, 'r+')  # input file
     for line in file_obj:
         for word in line:
-            binVal = ' '.join(format(x, 'b') for x in bytearray(word, 'utf-8'))
-            # print(binVal)
+            # binVal = ' '.join(format(x, 'b') for x in bytearray(word, 'utf-8'))
             for letter in word:
                 if not letter.isspace():
                     # getting the ascii value of the char
@@ -26,5 +25,5 @@ try:
     print(output)
     out_file.write(output)
 except FileNotFoundError:
-    print('File not found ! ')
+    print('File not found! ')
 
