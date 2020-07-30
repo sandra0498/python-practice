@@ -16,7 +16,7 @@ with SR.Microphone() as source:
         print(textOutput)
         engine.say("You said: {0} ".format(textOutput))
         engine.runAndWait()
-        print('Execution time: ', t.strftime("%I: %M: %S"))
+        print('Execution time: ', t.strftime("%I:%M:%S"))
 
     except Exception:
         print("Couldn't process the audio input ")
