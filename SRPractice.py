@@ -14,7 +14,7 @@ with SR.Microphone() as source:
         textOutput = variable.recognize_google(audioInput)
         print('text converted from audio: \n')
         print(textOutput)
-        engine.say("You said: {0} ".format(textOutput))
+        engine.say("You said: " + textOutput)
         engine.runAndWait()
         print('Execution time: ', t.strftime("%I:%M:%S"))
 
