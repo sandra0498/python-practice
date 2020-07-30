@@ -1,5 +1,6 @@
 filename = 'CSJOKE.txt'
 
+# code works for txt files 
 out_file = open('output.txt', 'w')
 
 output = ''
