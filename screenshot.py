@@ -14,9 +14,14 @@ with SR.Microphone() as receiver:
         if substring in textOutput:
             ss = p.screenshot('screenshot.png')
             print('screenshot taken in ', t.strftime("%I:%M:%S"))
+        else:
+            print('Did not take the screenshot!')
 
 
 
-    except Exception:
-        print('Did not take the screenshot!')
+
+
+    except SR.UnknownValueError:
+        # either did not speak into the mic/ could not understand the input 
+        print('Could not process the audio!')
 
