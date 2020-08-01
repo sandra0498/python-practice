@@ -5,11 +5,11 @@ import time as t
 
 variable = SR.Recognizer()
 
+substring = 'important'
 with SR.Microphone() as receiver:
     audioInput = variable.record(receiver, duration=7)
 
     try:
-        substring = 'important'
         textOutput = variable.recognize_google(audioInput)
         if substring in textOutput:
             ss = p.screenshot('screenshot.png')
@@ -18,5 +18,5 @@ with SR.Microphone() as receiver:
 
 
     except Exception:
-        print('Error!')
+        print('Did not take the screenshot!')
 
