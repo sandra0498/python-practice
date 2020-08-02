@@ -4,6 +4,9 @@ import pyttsx3 as ts
 
 engine = ts.init()
 
+# changing the voice
+voice_ID = 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Speech\Voices\Tokens\TTS_MS_EN-US_ZIRA_11.0'
+engine.setProperty('voice', voice_ID)
 variable = SR.Recognizer()
 
 with SR.Microphone() as source:
