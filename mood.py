@@ -14,6 +14,7 @@ def main():
     logo = PhotoImage(file = 'C:\\Users\\Sandra C\\Pictures\\sad.gif')
     label.config(image = logo)
     label.config(compound = 'top')
+    root.mainloop()
     
     
 
