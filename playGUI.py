@@ -1,6 +1,8 @@
 from tkinter import *
 
 root = Tk()
+root.title('Music Player')
+root.configure(bg='light blue')
 root.option_add('*tearOff',False)
 menubar = Menu(root)
 root.config(menu = menubar)
