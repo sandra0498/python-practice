@@ -14,7 +14,7 @@ class Survey:
         self.logo = self.logo.subsample(2,2)
 
         ttk.Label(self.frame_header, image=self.logo).grid(row=0, column=0, rowspan =2)
-        ttk.Label(self.frame_header, text='Time for feedback!').grid(row=0,column=1)
+        ttk.Label(self.frame_header, text='Time for feedback!', font=("Arial", 25)).grid(row=0,column=1)
         ttk.Label(self.frame_header,wraplength =350,
                   text=("You have enjoyed your free trial at getting to know me. "
                         "Please tell me what you thought about me :)")).grid(row=1,column=1)
