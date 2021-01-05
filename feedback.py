@@ -56,8 +56,6 @@ class Survey:
 
 
 
-
-
 def main():
     root = Tk()
     feedback = Survey(root)
