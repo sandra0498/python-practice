@@ -6,7 +6,7 @@ from tkinter import messagebox
 class Survey:
     def __init__(self, master):
 
-        master.title('My Feedback')
+        master.title('Personal Feedback')
         master.resizable(False, False)
         self.frame_header = ttk.Frame(master)
         master.configure(bg='light blue')
