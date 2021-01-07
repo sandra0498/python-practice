@@ -6,16 +6,19 @@ from tkinter import messagebox
 class Survey:
     def __init__(self, master):
 
+        master.title('My Feedback')
+        master.resizable(False, False)
         self.frame_header = ttk.Frame(master)
+        master.configure(bg='light blue')
 
         self.frame_header.pack()
         
         self.logo = PhotoImage(file='C:\\Users\\Sandra C\\Pictures\\nervous.gif')
-        self.logo = self.logo.subsample(2,2)
+        self.logo = self.logo.subsample(3,3)
 
         ttk.Label(self.frame_header, image=self.logo).grid(row=0, column=0, rowspan =2)
-        ttk.Label(self.frame_header, text='Time for feedback!', font=("Arial", 25)).grid(row=0,column=1)
-        ttk.Label(self.frame_header,wraplength =350,
+        ttk.Label(self.frame_header, text='Time for feedback!', font=("Arial", 25, 'bold')).grid(row=0,column=1)
+        ttk.Label(self.frame_header,wraplength =300,
                   text=("You have enjoyed your free trial at getting to know me. "
                         "Please tell me what you thought about me :)")).grid(row=1,column=1)
         self.frame_content = ttk.Frame(master)
@@ -51,6 +54,8 @@ class Survey:
         self.entry_name.delete(0,'end')
         self.entry_phone.delete(0,'end')
         self.entry_comments.delete(1.0,'end')
+
+
 
 
 
